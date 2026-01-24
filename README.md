@@ -1,2 +1,2 @@
 # Web-Deveopment
-A new repository containing web projects. 
+Repository contains Web Development projects. 
