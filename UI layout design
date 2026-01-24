@@ -1,0 +1,138 @@
+//html code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catchub - Watch. Communicate. Create.</title>
+    <link rel="stylesheet" href="task02.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <img src="logo.png" alt="Catchub" class="main-logo">
+                <h2 class="tagline">WATCH. COMMUNICATE. CREATE.</h2>
+                <p class="sub-tagline">Everything you need to socialise</p>
+                <div class="store-buttons">
+                    <img src="play_store.png" alt="Get it on Google Play" class="store-btn">
+                    <img src="app_store.png" alt="Download on App Store" class="store-btn">
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="top_screens.png" alt="App interface" class="floating-phone">
+            </div>
+        </div>
+    </header>
+
+    <section class="channels section-padding">
+        <div class="container grid-reverse">
+            <div class="feature-images">
+                <img src="sec_screens.png" alt="Channels interface" class="stacked-phones">
+            </div>
+            <div class="feature-text">
+                <h3>CHANNELS</h3>
+                <p>Enjoy the videos and music you love. Create your own business or entertainment channel.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="messages section-padding">
+        <div class="container grid-standard">
+            <div class="feature-text">
+                <h3>MESSAGES</h3>
+                <p>Communicate seamlessly. Create your own professional or social group chat</p>
+            </div>
+            <div class="feature-images">
+                <img src="thhh_screens.png" alt="Messages interface" class="stacked-phones">
+            </div>
+        </div>
+    </section>
+
+    <section class="future section-padding">
+        <div class="container grid-standard">
+            <div class="feature-images">
+                <img src="for_screens.png" alt="Future features" class="stacked-phones">
+            </div>
+            <div class="feature-text">
+                <h3>IN FUTURE</h3>
+                <p>Communicate seamlessly. Create your own professional or social group chat</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>For download click here:</p>
+            <div class="store-buttons central">
+                <img src="play_store.png" alt="Google Play" class="store-btn">
+                <img src="app_store.png" alt="App Store" class="store-btn">
+            </div>
+            <p class="contact-text">Any questions? Feel free to <a href="#">CONTACT US</a></p>
+            <div class="footer-logo">
+                <img src="peratude.png" alt="Company Logo" class="mini-logo">
+                <p class="brand-footer">PERATUDE</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+//CSS code
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; color: #555; overflow-x: hidden; }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.main-logo { width: 280px; margin-bottom: 20px; }
+.tagline {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.sub-tagline {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 30px;
+}
+h3 {
+    font-size: 32px;
+    letter-spacing: 5px;
+    font-weight: 900;
+    color: #444;
+    margin-bottom: 20px;
+}
+.feature-text p {
+    font-size: 22px;
+    line-height: 1.4;
+    color: #666;
+    max-width: 450px;
+}
+.section-padding { padding: 100px 0; }
+
+.hero-grid, .grid-standard, .grid-reverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.grid-reverse .feature-text { text-align: left; grid-column: 2; }
+.grid-reverse .feature-images { grid-column: 1; grid-row: 1; }
+.floating-phone { width: 100%; max-width: 550px; }
+.stacked-phones { width: 120%; max-width: 650px; }
+.store-buttons { display: flex; gap: 15px; }
+.store-btn { height: 55px; cursor: pointer; }
+.footer { text-align: center; padding: 80px 0; background: #fff; }
+.central { justify-content: center; margin: 25px 0; }
+.contact-text { font-size: 18px; margin-bottom: 40px; }
+.contact-text a { color: #00AEEF; text-decoration: none; font-weight: bold; }
+.mini-logo { width: 50px; }
+.brand-footer { font-size: 12px; letter-spacing: 3px; margin-top: 10px; color: #aaa; }
+.channels {
+    background: radial-gradient(circle at 10% 50%, #f7f7f7 0%, transparent 50%);
+}
