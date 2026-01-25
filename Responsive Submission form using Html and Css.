@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Submission Form</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin:0;
+    background:#8f2d2c;
+}
+
+.top-bar{
+    background:white;
+    height:80px;
+    padding:10px 30px;
+}
+
+.logo{
+    height:60px;
+}
+
+.main{
+    display:flex;
+    padding:40px;
+    color:white;
+}
+
+.left{
+    width:50%;
+    padding:40px;
+}
+
+.left h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.left p{
+    font-size:14px;
+    max-width:420px;
+    line-height:1.6;
+}
+
+.deadline{
+    margin-top:40px;
+    font-size:22px;
+    font-weight:bold;
+    color:black;
+}
+
+.right{
+    width:50%;
+    padding:20px 40px;
+}
+
+.right input,
+.right textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    background:transparent;
+    border:2px solid #e6cfcf;
+    color:white;
+    font-size:14px;
+    outline:none;
+}
+
+.right textarea{
+    height:85px;
+    resize:none;
+}
+
+.section-title{
+    font-size:20px;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+.note{
+    font-size:12px;
+    margin-bottom:15px;
+}
+
+.award{
+    margin-bottom:18px;
+}
+
+.award-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:6px;
+}
+
+.award-header label{
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    white-space:nowrap; 
+}
+
+.left-check{
+    appearance:auto;
+    -webkit-appearance:auto;
+    cursor:pointer;
+}
+
+.right-check{
+    appearance:auto;
+    -webkit-appearance:auto;
+    cursor:pointer;
+}
+
+.success{
+    margin-top:30px;
+    background:white;
+    color:black;
+    padding:12px 25px;
+    width:fit-content;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.tick{
+    font-size:22px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <img src="logo.png" class="logo">
+</div>
+
+<div class="main">
+
+    <div class="left">
+        <h1>Submission</h1>
+        <p>
+            All details of submissions will be kept strictly private and confidential by Mailman and will not be used for any purpose other than judging Red Card 2018 winners.
+        </p>
+
+        <div class="deadline">
+            Applications will close on the<br>
+            15th December 2017
+        </div>
+    </div>
+
+    <div class="right">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Organisation">
+
+        <div class="section-title">Which Award</div>
+        <div class="note">(Please tick and provide details for all of the awards you would like to be nominated for)</div>
+
+        <div class="award">
+            <div class="award-header">
+                <label><input type="checkbox" class="left-check"> Best Livestream</label>
+                <input type="checkbox" class="right-check">
+            </div>
+            <textarea placeholder="Description & Results (max. 150 words)"></textarea>
+        </div>
+
+        <div class="award">
+            <div class="award-header">
+                <label><input type="checkbox" class="left-check"> Best Tour Campaign</label>
+                <input type="checkbox" class="right-check">
+            </div>
+            <textarea placeholder="Description & Results (max. 150 words)"></textarea>
+        </div>
+
+        <div class="award">
+            <div class="award-header">
+                <label><input type="checkbox" class="left-check"> Best Sponsor Activation</label>
+                <input type="checkbox" class="right-check">
+            </div>
+            <textarea placeholder="Description & Results (max. 150 words)"></textarea>
+        </div>
+
+        <div class="award">
+            <div class="award-header">
+                <label><input type="checkbox" class="left-check"> Best Use of Technology</label>
+                <input type="checkbox" class="right-check">
+            </div>
+            <textarea placeholder="Description & Results (max. 150 words)"></textarea>
+        </div>
+
+        <div class="award">
+            <div class="award-header">
+                <label><input type="checkbox" class="left-check"> Best Online Campaign</label>
+                <input type="checkbox" class="right-check">
+            </div>
+            <textarea placeholder="Description & Results (max. 150 words)"></textarea>
+        </div>
+
+        <div class="success">
+            <span class="tick">✔</span> Submission Successful
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
