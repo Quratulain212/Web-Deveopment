@@ -130,7 +130,7 @@ body {
     background-color: white;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
 
-clip-path: polygon(0% 0%, 100% 0, 100% 86%, 67% 100%, 0% 100%)
+clip-path: polygon(0% 0%, 100% 0, 100% 89.8%, 65% 100%, 0% 100%);
 }
 .hero {
     background-color: #8B2323; 
