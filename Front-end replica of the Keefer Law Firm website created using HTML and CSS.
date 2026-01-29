@@ -1,0 +1,300 @@
+//Html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keefer Law Firm - Instructor Match</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+
+<header class="top-header">
+    <div class="container header-flex">
+        <div class="logo-area">
+            <img src="logo.png" class="logo" alt="Keefer Law Firm">
+        </div>
+        <div class="phone-area">
+            <div class="call-text">CALL OUR OFFICES NOW!</div>
+            <div class="phone-number">540.433.6906</div>
+            <div class="tagline">Get Your Questions Answered Fast</div>
+        </div>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <div class="container nav-inner">
+        <a href="#" class="active">HOME</a>
+        <a href="#">BIOGRAPHY</a>
+        <a href="#">BLOG</a>
+        <a href="#">AREAS WE SERVE</a>
+        <a href="#">LIBRARY</a>
+        <a href="#">CONTACT</a>
+    </div>
+</nav>
+
+<div class="container hero-container">
+    <div class="hero-left">
+        <div class="banner-wrapper">
+            <img src="gurantee_banner.gif" alt="Legal Experience Banner">
+
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <div class="form-header">
+            <span class="q-title">QUESTIONS?</span>
+            <span class="q-subtext">Have a <strong>Question</strong><br> About Your Case?</span>
+        </div>
+        <p class="form-desc">Enter your information and get your questions answered quickly and discreetly or call us at: 540.433.6906</p>
+        
+        <form class="contact-form">
+            <div class="form-group"><label>NAME:</label><input type="text"></div>
+            <div class="form-group"><label>EMAIL:</label><input type="email"></div>
+            <div class="form-group"><label>PHONE:</label><input type="text"></div>
+            <img src="confidential.png">
+            
+            <textarea placeholder="Tell us about your case here..."></textarea>
+            
+            <div class="form-footer">
+                <span class="privacy">100% Privacy Guaranteed</span>
+                <button type="submit" class="btn-form-red">Ask Us About Your Case ▶</button>
+            </div>
+        
+        </form>
+    </div>
+</div>
+
+<div class="container middle-info-row">
+    <div class="info-card">
+        <div class="card-content">
+            <h3>CHARGED WITH <span class="dark-red">DUI?</span></h3>
+            <span class="sub-head">FREE CASE EVALUATION</span>
+            <div class="card-flex">
+                <p>Being charged with a DUI can be scary. Get the help you deserve.<br>
+                    <br>Click here to let us know how we can help you with your case.</p>
+                <img src="paste_board.gif" class="card-icon" alt="Evaluation">
+            </div>
+            <img src="lf_bt_hr_shadow.png" class="shadow-img">
+            <a href="#" class="btn-small-red">CLICK HERE ▶</a>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <div class="card-content">
+            <div class="card-header-flex">
+                <div class="text-side">
+                    <h3>LAW <span class="dark-red">BLOG</span></h3>
+                    <p>Learn more about Virginia Traffic Laws.</p>
+                    <img src="lf_bt_hr_shadow.png" class="shadow-img">
+                    <a href="#" class="btn-small-red">CLICK HERE ▶</a>
+                </div>
+                <img src="pic1.gif" class="card-icon-large" alt="Blog">
+            </div>
+            <hr class="card-divider">
+            <div class="card-header-flex">
+                <div class="text-side">
+                    <h3>CASE <span class="dark-red">RESULTS</span></h3>
+                    <p>See how we help our clients. Read our latest case results.</p>
+                    <img src="lf_bt_hr_shadow.png" class="shadow-img">
+                    <a href="#" class="btn-small-red">CLICK HERE ▶</a>
+                </div>
+                <img src="order_icon.gif" class="card-icon-large" alt="Results">
+            </div>
+        </div>
+    </div>
+
+    <div class="info-card credentials-card">
+        <div class="card-content">
+            <div class="badge-row">
+                <img src="avo_rating_large.gif" alt="Avo Rating">
+                <img src="national_college_small.gif" alt="National College">
+            </div>
+            <h3 class="cred-title">CERTIFICATES & CREDENTIALS</h3>
+            <p>Keefer Law Firm has protected the rights of Virginians for over 30 years.</p>
+            <img src="lf_bt_hr_shadow.png" class="shadow-img">
+            <a href="#" class="btn-small-red">LEARN MORE ▶</a>
+        </div>
+    </div>
+</div>
+
+<div class="container main-content-area">
+    <aside class="sidebar-left">
+        <h4 class="sidebar-title">PRACTICE <span class="red-text">AREAS</span></h4>
+        <nav class="practice-nav">
+            <a href="#" class="p-box"> <img src="menu_bg.gif">
+                 DUI & DWI <span class="p-sub">LEARN MORE <img src="bullet_red.gif"></span></a>
+            <a href="#" class="p-box dark"><img src="menu_bg.gif"> 
+                 RECKLESS DRIVING <span class="p-sub">LEARN MORE <img src="bullet_red.gif"></span></a>
+            <a href="#" class="p-box"><img src="menu_bg.gif">
+                 SPEEDING TICKETS <span class="p-sub">LEARN MORE <img src="bullet_red.gif"></span></a>
+            <a href="#" class="p-box"><img src="menu_bg.gif"> 
+                 TRAFFIC VIOLATIONS <span class="p-sub">LEARN MORE <img src="bullet_red.gif"></span></a>
+        </nav>
+
+        <h4 class="sidebar-title spacing-top">LEARN <span class="red-text">MORE</span> ABOUT</h4>
+        <div class="faded-menu">MENU<br>AREA<br>HERE</div>
+    </aside>
+
+    <main class="center-column">
+        <h1>&lt;H1&gt;PAGE TITLE HERE</h1>
+        <p>Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum.</p>
+    </main>
+
+    <aside class="sidebar-right">
+        <div class="widget">
+            <h4>CLIENT <br> <span class="red-text">TESTIMONIALS</span></h4>
+            <p>Read what others say <br>about Keefer Law Firm.</p>
+            <hr class="shadow-hr">
+            <a href="#" class="btn-glossy-red">CLICK HERE ▶</a>
+        </div>
+
+        <div class="widget">
+            <h4>DOWNLOAD <br><span class="red-text">FREE</span> REPORTS</h4>
+            <p>Discover the truth about <br>Virginia Law.</p>
+            <hr class="shadow-hr">
+            <a href="#" class="btn-glossy-red">CLICK HERE ▶</a>
+        </div>
+
+        <div class="widget">
+            <h4>CONTACT <span class="red-text">OUR <br></span> OFFICES</h4>
+            <p>Get your questions <br> answered right now.</p>
+            <hr class="shadow-hr">
+            <a href="#" class="btn-glossy-red">CLICK HERE ▶</a>
+        </div>
+
+        <div class="badges-stack">
+            <img src="avo_rating_large.gif" alt="Avo">
+            <img src="national_college_large.gif" alt="National College">
+        </div>
+
+        <div class="social-follow">
+            <h4 class="follow-label">FOLLOW US</h4>
+            <img src="lf_bt_hr_shadow.png" class="shadow-img-small">
+            <div class="social-icons">
+                <img src="fb_icon.gif">
+                <img src="google_icon.gif">
+                <img src="twitter_icon.gif">
+                <img src="linked_icon.gif">
+            </div>
+        </div>
+    </aside>
+</div>
+
+<footer class="bottom-stripe"></footer>
+</body>
+</html>
+
+//Css
+* { box-sizing: border-box; }
+body { 
+    margin: 0; 
+    font-family: "Arial Narrow", Arial, sans-serif; 
+    background-color: #fff; 
+    color: #444;
+}
+.container { width: 1000px; margin: 0 auto; }
+
+.header-flex { display: flex; justify-content: space-between; padding: 20px 0; align-items: flex-end; }
+.logo { height: 90px; flex-shrink: o;}
+.phone-number { font-size: 50px; font-weight: 800; color: #333; line-height: 0.8; text-align: right;}
+.call-text { color: #b70000; font-weight: bold; font-size: 18px; text-align: right; }
+.tagline { text-align: right; font-size: 14px; color: #666; font-weight: bold; }
+
+.main-nav { background: linear-gradient(to bottom, #bd0000, #800000); }
+.nav-inner { display: flex; justify-content: end;}
+.nav-inner a { 
+    color: white; text-decoration: none; padding: 12px 22px;font-weight: bold ;
+}
+.nav-inner a.active { background-color: #630000; }
+
+.hero-container { display: flex; gap: 15px; margin-top: 25px; }
+.hero-left { width: 66%; }
+.banner-wrapper { position: relative; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+.banner-wrapper img { width: 100%; display: block; }
+.hero-btn-overlay { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); }
+.btn-hero-red { 
+    background: linear-gradient(to bottom, #e30000, #a00000); background-size:cover ;
+    padding: 20px; text-decoration: none; font-weight: bold; border-radius: 3px;
+    border: 1px solid #fff; font-size: 18px;
+}
+
+.hero-right { 
+    width: 34%; background-image: url(form_bg.jpg) ; border: 1px solid #ccc; padding: 15px; 
+    position: center; border-radius: 4px;
+}
+.form-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px;}
+.q-title { background: #800000; color: white; padding: 5px 8px; font-size: 18px; font-weight: bold; }
+.q-subtext { font-size: 15px; color: #333; line-height: 1.1; }
+.form-desc { font-size: 11px; margin-bottom: 12px; color: #555; }
+.form-group { display: flex; align-items: center; margin-bottom: 6px; }
+.form-group label { width: 50px;}
+.form-group input { height: 20px;}
+textarea { width: 100%; height: 65px; margin-top: 5px; border: 1px solid #aaa; }
+.form-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+.privacy { font-size: 10px; font-style: italic; color: #777; }
+.btn-form-red { background: #800000; color: white; border: none; padding: 8px 12px; font-weight: bold; cursor: pointer; border-radius: 2px; }
+.stamp { position: absolute; right: 10px; top: 110px; width: 110px; opacity: 0.9; }
+
+.middle-info-row { display: flex;   }
+.info-card { flex: 1; padding: 12px; background:  white; border-top: 3px solid #ddd; border-right: 1px solid #ccc}
+.info-card h3 { font-size: 14px; margin: 0; color: #333; }
+.dark-red { color: #800000; }
+.sub-head { font-size: 11px; font-weight: bold; color: #800000; display: block; margin-bottom: 8px; }
+.card-flex { display: flex; gap: 10px; align-items: flex-start; }
+.card-flex p { font-size: 11px; margin: 0; line-height: 1.4; }
+.card-icon { width: 110px; }
+.shadow-img { width: 100%; margin: 8px 0; }
+.btn-small-red { 
+    background: #800000; color: white; text-decoration: none; 
+    font-size: 13px; padding: 3px 12px; display: inline-block; font-weight: bold;
+}
+.info-card{
+    margin: 0 auto;
+   
+}
+.card-content{
+    display: inline-block;
+}
+.card-header-flex { display: flex; justify-content: space-between; align-items: center; }
+.card-icon-large { width: 55px; }
+.card-divider { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+.badge-row { display: flex; justify-content: space-around; margin-bottom: 10px; }
+.badge-row img { height: 60px; }
+.cred-title { text-align: center; }
+
+.sidebar-title { padding-bottom: 5px; font-size: 16px; margin-bottom: 15px; color: #333; }
+.red-text { color: #800000; }
+.p-box { 
+    display: block; background: linear-gradient(to right, #999, #777); 
+    color: white; padding: 10px; text-decoration: none; font-weight: bold;
+    margin-bottom: 8px; position: relative; font-size: 15px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.p-box.dark { background: linear-gradient(to right, #666, #444); }
+.bg-img { display: none; }
+.p-sub { display: block; font-size: 9px; text-align: right; margin-top: 4px; font-weight: normal; }
+
+.main-content-area { display: flex; gap: 30px; margin-top: 30px; }
+.sidebar-left, .sidebar-right { width: 220px;font-size: 18px; }
+.center-column { flex: 1; border-left: 1px solid #eee; padding-left: 20px; }
+.center-column h1 { font-size: 24px; color: #333; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+.faded-menu { color: #ddd; font-size: 26px;text-align: center; font-style: normal; font-weight: bold; line-height: 1.2; margin-top: 20px; }
+
+.widget { margin-bottom: 25px;}
+.widget h4 { font-size: 23px; font-style: normal; margin: 0 0 5px 0; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+.widget p { font-size: 18px; color: #666; margin: 5px 0; }
+.shadow-hr { border: none; height: 12px; background: url('lf_bt_hr_shadow.png') no-repeat center; background-size: contain; margin: 5px 0; }
+.btn-glossy-red { 
+    background: linear-gradient(to bottom, #e30000, #a00000); color: white;
+    padding: 5px 15px;text-align: center; font-size: 13px; text-decoration: none; font-weight: bold;
+    border-radius: 3px; display: inline-block; box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+.badges-stack img { width: 170px; display: block; margin: 0 auto 15px; }
+
+.follow-label { text-align: center; padding-bottom: 2px; font-size: 20px; }
+.shadow-img-small { width: 100%; height: 6px; }
+.social-icons { display: flex; justify-content: flex-start; gap: 37px; margin-top: 8px; }
+.social-icons img { width: 26px; height: 26px; }
+
+.bottom-stripe { height: 15px; background: gray; border-top: 8px solid #800000; margin-top: 50px; }
