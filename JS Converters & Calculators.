@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Converters & Calculators</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-10 font-sans">
+
+  <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold text-center mb-10">
+      JavaScript Practical Assignment
+    </h1>
+
+    <section class="mb-6">
+      <h2 class="font-semibold mb-2">1. Age to Days Converter</h2>
+      <input id="age" type="number" placeholder="Age in years" class="border p-2 mr-2">
+      <button onclick="ageToDays()" class="btn">Convert</button>
+      <p id="ageResult" class="mt-2"></p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="font-semibold mb-2">2. Hours to Seconds Converter</h2>
+      <input id="hours" type="number" placeholder="Hours" class="border p-2 mr-2">
+      <button onclick="hoursToSeconds()" class="btn">Convert</button>
+      <p id="hoursResult" class="mt-2"></p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="font-semibold mb-2">3. Find Next Number</h2>
+
+      <p class="text-sm text-gray-600 mb-1">Scenario A: Integer vs Float</p>
+      <input id="singleNum" type="number" step="any" class="border p-2 mr-2">
+      <button onclick="findNextSingle()" class="btn">Find Next</button>
+      <p id="singleResult" class="mt-2"></p>
+
+      <p class="text-sm text-gray-600 mt-4 mb-1">Scenario B: Next Number in Array</p>
+      <input id="arrayInput" type="number" class="border p-2 mr-2">
+      <button onclick="findNextInArray()" class="btn">Find in Array</button>
+      <p id="arrayNextResult" class="mt-2"></p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="font-semibold mb-2">4. Capitalize Name</h2>
+      <input id="userName" type="text" placeholder="enter lowercase name" class="border p-2 mr-2">
+      <button onclick="capitalizeName()" class="btn">Capitalize</button>
+      <p id="nameResult" class="mt-2"></p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="font-semibold mb-2">5. BMI Calculator</h2>
+      <input id="weight" type="number" placeholder="Weight (kg)" class="border p-2 mr-2">
+      <input id="height" type="number" step="any" placeholder="Height (meters)" class="border p-2 mr-2">
+      <button onclick="calculateBMI()" class="btn">Calculate</button>
+      <p id="bmiResult" class="mt-2"></p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="font-semibold mb-2">6. Random Array (First & Last)</h2>
+      <button onclick="generateRandomArray()" class="btn">Generate Array</button>
+      <p id="arrayResult" class="mt-2"></p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="font-semibold mb-2">7. Textbox Addition (Event Handling)</h2>
+      <input id="box1" type="number" placeholder="Textbox 1" class="border p-2 mr-2">
+      <input id="box2" type="number" placeholder="Textbox 2" class="border p-2 mr-2">
+      <input id="box3" type="text" placeholder="Result" class="border p-2" readonly>
+    </section>
+
+    <button onclick="resetAll()" class="bg-red-500 text-white px-6 py-2 rounded">
+      Reset All
+    </button>
+  </div>
+
+<script>
+const style = document.createElement("style");
+  style.innerHTML = `.btn{background:#3b82f6;color:white;padding:6px 14px;border-radius:6px}`;
+  document.head.appendChild(style);
+
+  function ageToDays() {
+    ageResult.innerText = age.value * 365 + " days";
+  }
+
+  function hoursToSeconds() {
+    hoursResult.innerText = hours.value * 3600 + " seconds";
+  }
+
+  function findNextSingle() {
+    const num = Number(singleNum.value);
+    singleResult.innerText = Number.isInteger(num)
+      ? "Next integer: " + (num + 1)
+      : "Next float: " + (num + 0.1);
+  }
+
+  let randomArr = [];
+  function findNextInArray() {
+    if (randomArr.length === 0) {
+      randomArr = Array.from({ length: 6 }, () => Math.floor(Math.random() * 50));
+    }
+    const val = Number(arrayInput.value);
+    const index = randomArr.indexOf(val);
+
+    if (index === -1 || index === randomArr.length - 1) {
+      arrayNextResult.innerText = "Array: " + randomArr + " | No next element found";
+    } else {
+      arrayNextResult.innerText =
+        "Array: " + randomArr + " | Next of " + val + " is " + randomArr[index + 1];
+    }
+  }
+
+  function capitalizeName() {
+    const input = document.getElementById("userName").value;
+    nameResult.innerText =
+      input.charAt(0).toUpperCase() + input.slice(1);
+  }
+
+  function calculateBMI() {
+    const bmi = weight.value / (height.value ** 2);
+    bmiResult.innerText = "BMI: " + bmi.toFixed(2);
+  }
+
+  function generateRandomArray() {
+    randomArr = Array.from({ length: 5 }, () => Math.floor(Math.random() * 100));
+    arrayResult.innerText =
+      "Array: " + randomArr +
+      " | First: " + randomArr[0] +
+      " | Last: " + randomArr[randomArr.length - 1];
+  }
+
+  let secondEntered = false;
+
+  box1.addEventListener("input", () => {
+    if (!secondEntered) box3.value = NaN;
+  });
+
+  box2.addEventListener("input", () => {
+    secondEntered = true;
+    box3.value = Number(box1.value) + Number(box2.value);
+  });
+
+  function resetAll() {
+    document.querySelectorAll("input").forEach(i => i.value = "");
+    document.querySelectorAll("p").forEach(p => p.innerText = "");
+    randomArr = [];
+    secondEntered = false;
+  }
+</script>
+
+</body>
+</html>
