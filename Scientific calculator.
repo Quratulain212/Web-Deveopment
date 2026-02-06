@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scientific Calculator</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body id="body" class="bg-gray-900 flex items-center justify-center min-h-screen transition-all">
+
+<div id="calculator" class="bg-gray-800 p-6 rounded-lg shadow-2xl border-4 border-black w-[760px] transition-all">
+
+<input id="display"
+class="w-full h-16 text-right text-3xl px-4 mb-4 rounded bg-green-300 text-black outline-none"
+readonly>
+
+<div class="flex justify-between mb-3">
+<div id="modeLabel" class="text-gray-300 text-sm">- Deg</div>
+<button onclick="toggleDark()" class="bg-yellow-400 px-3 rounded font-semibold">🌙</button>
+</div>
+
+<div class="grid grid-cols-8 gap-3">
+
+<button class="sci" onclick="toggleMode()">Deg</button>
+<button class="sci" onclick="append('(')">(</button>
+<button class="sci" onclick="append(')')">)</button>
+<button class="sci" onclick="append('%')">%</button>
+<button class="mem" onclick="memoryClear()">MC</button>
+<button class="mem" onclick="memoryAdd()">M+</button>
+<button class="mem" onclick="memorySub()">M-</button>
+<button class="mem" onclick="memoryRecall()">MR</button>
+
+<button class="sci" onclick="reciprocal()">1/x</button>
+<button class="sci" onclick="square()">x²</button>
+<button class="sci" onclick="cube()">x³</button>
+<button class="sci" onclick="append('**')">xʸ</button>
+<button class="sci" onclick="clearDisplay()">C</button>
+<button class="sci" onclick="toggleSign()">±</button>
+<button class="sci" onclick="append('/')">÷</button>
+<button class="sci" onclick="append('*')">*</button>
+
+<button class="sci" onclick="factorial()">x!</button>
+<button class="sci" onclick="sqrt()">√</button>
+<button class="sci" onclick="append('Math.cbrt(')">∛</button>
+<button class="sci" onclick="append('log(')">log</button>
+<button class="num" onclick="append('7')">7</button>
+<button class="num" onclick="append('8')">8</button>
+<button class="num" onclick="append('9')">9</button>
+<button class="sci" onclick="append('-')">-</button>
+
+<button class="sci" onclick="append('sin(')">sin</button>
+<button class="sci" onclick="append('cos(')">cos</button>
+<button class="sci" onclick="append('tan(')">tan</button>
+<button class="sci" onclick="append('ln(')">ln</button>
+<button class="num" onclick="append('4')">4</button>
+<button class="num" onclick="append('5')">5</button>
+<button class="num" onclick="append('6')">6</button>
+<button class="sci" onclick="append('+')">+</button>
+
+<button class="sci" onclick="append('Math.sinh(')">sinh</button>
+<button class="sci" onclick="append('Math.cosh(')">cosh</button>
+<button class="sci" onclick="append('Math.tanh(')">tanh</button>
+<button class="sci" onclick="append('Math.exp(')">eˣ</button>
+<button class="num" onclick="append('1')">1</button>
+<button class="num" onclick="append('2')">2</button>
+<button class="num" onclick="append('3')">3</button>
+<button class="equal row-span-2 h-full" onclick="calculate()">=</button>
+
+<button class="sci" onclick="append('Math.PI')">π</button>
+<button class="sci" onclick="append('*10**')">EE</button>
+<button class="sci" onclick="append('Math.random()')">rnd</button>
+<button class="sci" onclick="deleteLast()">⌫</button>
+<button class="num col-span-2" onclick="append('0')">0</button>
+<button class="num" onclick="append('.')">.</button>
+
+</div>
+</div>
+
+<script>
+let display=document.getElementById("display");
+let modeLabel=document.getElementById("modeLabel");
+let body=document.getElementById("body");
+let calculator=document.getElementById("calculator");
+
+let memory=0;
+let degreeMode=true;
+let dark=true;
+
+function append(v){display.value+=v;}
+function clearDisplay(){display.value="";}
+function deleteLast(){display.value=display.value.slice(0,-1);}
+function toggleSign(){if(display.value!=="")display.value=String(-Number(display.value));}
+
+function toggleMode(){
+degreeMode=!degreeMode;
+modeLabel.innerText=degreeMode?"- Deg":"- Rad";
+}
+
+function toggleDark(){
+dark=!dark;
+if(dark){
+body.className="bg-gray-900 flex items-center justify-center min-h-screen";
+calculator.className="bg-gray-800 p-6 rounded-lg shadow-2xl border-4 border-black w-[760px]";
+}else{
+body.className="bg-gray-200 flex items-center justify-center min-h-screen";
+calculator.className="bg-white p-6 rounded-lg shadow-2xl border-4 border-black w-[760px]";
+}
+}
+
+function square(){display.value=Math.pow(Number(display.value),2);}
+function cube(){display.value=Math.pow(Number(display.value),3);}
+function sqrt(){display.value=Math.sqrt(Number(display.value));}
+function reciprocal(){display.value=1/Number(display.value);}
+
+function factorial(){
+let n=Number(display.value);
+if(n<0||!Number.isInteger(n)) return display.value="Error";
+let r=1;
+for(let i=1;i<=n;i++) r*=i;
+display.value=r;
+}
+
+function memoryAdd(){memory+=Number(display.value)||0;}
+function memorySub(){memory-=Number(display.value)||0;}
+function memoryRecall(){display.value=memory;}
+function memoryClear(){memory=0;}
+
+function calculate(){
+try{
+let exp=display.value;
+
+if(degreeMode){
+exp=exp.replace(/sin\(([^)]+)\)/g,(_,v)=>`Math.sin(${v}*Math.PI/180)`);
+exp=exp.replace(/cos\(([^)]+)\)/g,(_,v)=>`Math.cos(${v}*Math.PI/180)`);
+exp=exp.replace(/tan\(([^)]+)\)/g,(_,v)=>`Math.tan(${v}*Math.PI/180)`);
+}else{
+exp=exp.replace(/sin\(/g,"Math.sin(");
+exp=exp.replace(/cos\(/g,"Math.cos(");
+exp=exp.replace(/tan\(/g,"Math.tan(");
+}
+
+exp=exp.replace(/log\(([^)]+)\)/g,(_,v)=>`Math.log10(${v})`);
+exp=exp.replace(/ln\(([^)]+)\)/g,(_,v)=>`Math.log(${v})`);
+
+display.value=eval(exp);
+}catch{
+display.value="Error";
+}
+}
+</script>
+
+<style>
+button{height:48px;border-radius:6px;font-weight:600;}
+.sci{background:#4ade80;}
+.mem{background:#fb923c;}
+.num{background:#e5e7eb;}
+.equal{background:#16a34a;color:white;font-size:24px;}
+</style>
+
+</body>
+</html>
