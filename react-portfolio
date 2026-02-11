@@ -1,0 +1,231 @@
+//App.jsx
+import { useState } from "react";
+import "./App.css";
+
+import toolImg from "./assets/tool.jpg";
+import portfolioImg from "./assets/portfolio.jpg";
+import landingImg from "./assets/landing.jpg";
+
+function App() {
+  const [dark, setDark] = useState(false);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <div className={dark ? "app dark" : "app"}>
+
+      <header className="navbar">
+        <h2 className="logo">Portfolio</h2>
+
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button onClick={() => setDark(!dark)} className="mode-btn">
+          {dark ? "Light" : "Dark"}
+        </button>
+      </header>
+
+      <section className="hero">
+        <h1>Frontend Developer & Designer</h1>
+        <p>
+          I build modern, responsive and user-friendly web applications
+          using React and modern technologies.
+        </p>
+
+        <button onClick={() => scrollToSection("projects")}>
+          View My Work
+        </button>
+      </section>
+
+      <section id="about" className="section">
+        <h2>About Me</h2>
+        <p>
+          Passionate web developer focused on building clean UI,
+          scalable applications, and interactive experiences.
+        </p>
+      </section>
+
+      <section id="projects" className="cards">
+        <div className="card">
+          <h3>Tools List Manager (React + Vite)</h3>
+          <img src={toolImg} alt="Tool" />
+          <p>
+            Tool management application with dark mode,
+            component-based structure, and responsive layout.
+          </p>
+          <button onClick={() => alert("Opening Tools List App")}>
+            View Project
+          </button>
+        </div>
+
+        <div className="card">
+          <h3>Responsive Portfolio Website</h3>
+          <img src={portfolioImg} alt="Portfolio" />
+          <p>
+            Personal portfolio featuring modern design,
+            mobile-first responsiveness, and interactive UI.
+          </p>
+          <button onClick={() => alert("Opening Portfolio Website")}>
+            View Project
+          </button>
+        </div>
+
+        <div className="card">
+          <h3>Business Landing Page UI</h3>
+          <img src={landingImg} alt="Landing" />
+          <p>
+            Professional landing page with hero section,
+            feature highlights, and clean UX structure.
+          </p>
+          <button onClick={() => alert("Opening Landing Page")}>
+            View Project
+          </button>
+        </div>
+      </section>
+
+       <section id="contact" className="section">
+        <h2>Contact</h2>
+        <p>Email: xyz@email.com</p>
+      </section>
+
+      <footer className="footer">
+        <p>© 2026 Professional React Portfolio</p>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
+
+//App.css
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #222;
+}
+
+.app.dark {
+  background-color: #121212;
+  color: #f4f4f9;
+}
+
+.app.dark .navbar {
+  background: rgba(20, 20, 20, 0.8);
+}
+
+.app.dark .card {
+  background: #1e1e1e;
+  color: #f4f4f9;
+}
+
+.app.dark .footer {
+  background: #000;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar h2.logo {
+  margin: 0;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+.mode-btn {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.section {
+  padding: 60px 40px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+  margin-top: auto;
+}
